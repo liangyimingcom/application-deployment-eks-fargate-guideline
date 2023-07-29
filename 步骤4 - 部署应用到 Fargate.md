@@ -124,7 +124,8 @@ Accept-Ranges: bytes
 通过以下命令下载 2048 游戏 yaml 文件
 
 ```bash
-curl -o 2048_full.yaml https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.1.0/docs/examples/2048/2048_full.yaml
+curl -o 2048_full.yaml https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/d1b8fbb0bc6b8b7639e0be06cfd6693751ac604d/docs/examples/2048/2048_full.yaml
+
 ```
 
 该文件里创建了一个 game-2048 namespace，并在这个 namespace 里创建了 deployment-2048，service-2048 和 ingress-2048。 
