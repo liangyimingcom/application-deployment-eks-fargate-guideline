@@ -158,4 +158,19 @@ aws sts get-caller-identity
 ![c9stsidentity](image/cloud9/c9stsidentity.jpg)
 
 
+# 如果报错，请修改以下的步骤（yiming update by 2025）
+### 报错原因：由于安全考虑，AWS控制带账号登录采用了联邦登录，这导致了在Cloud9里面无法通过 aws sts get-caller-identity --output text --query Account & curl -s 169.254.169.254/latest/dynamic/instance-identity/document 获取到aws accountid & region。 所以这里改为手动输入：
 
+### 禁止修改《更新 Cloud9 环境》的操作步骤：
+1、获得Account ID，通过 aws sts get-caller-identity 获得 
+
+2、获得region，这里是孟买所以为ap-south-1 
+
+3、显示输入： 
+export ACCOUNT_ID=153705xxxxx
+export AWS_REGION=ap-south-1
+
+4、执行命令行： 
+aws sts get-caller-identity
+
+能够成功，返回值role也改变了。
